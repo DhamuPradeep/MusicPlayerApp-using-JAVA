@@ -53,11 +53,9 @@ class Album {
     public boolean addSong(String title, double duration){
         if(findSong(title) == null){
             songs.add(new Song(title,duration));
-//            System.out.println(title + "successfully added to the list");
             return true;
         }
         else {
-//            System.out.println("Song with name "+ title+ " already exist in the list");
             return false;
         }
     }
@@ -68,7 +66,6 @@ class Album {
             PlayList.add(this.songs.get(index));
             return true;
         }
-//        System.out.println("this album does not have song with trackNumber "+trackNumber);
         return false;
     }
 
@@ -79,7 +76,6 @@ class Album {
                 return true;
             }
         }
-//        System.out.println(title + "there is no such song in album");
         return false;
     }
 }
@@ -210,13 +206,13 @@ class Main {
 
     private static void printMenu(){
         System.out.println("Available options\n press");
-        System.out.println("0 - to quit\n"+
+        System.out.println("0 - to quit the playlist\n"+
                 "1 - to play next song\n"+
                 "2 - to play previous song\n"+
                 "3 - to replay the current song\n"+
                 "4 - list of all songs \n"+
                 "5 - print all available options\n"+
-                "6 - delete current song");
+                "6 - delete current song from playlist");
     }
 
     private static void printList(LinkedList<Song> playList){
